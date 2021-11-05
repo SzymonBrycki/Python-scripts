@@ -26,7 +26,7 @@ import time
 
 def epoch_beginning():
 	'''
-	This function return the beginning of an epoch on a given computer. 
+	This function returns the beginning of an epoch on a given computer. 
 	To use, just print the function.
 	'''
 	
