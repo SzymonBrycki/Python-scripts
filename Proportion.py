@@ -88,7 +88,7 @@ def Proportion():
 		
 	else:
 		print("")
-		print("Wrong input. Try again")
+		print("Wrong input. Try again.")
 		Proportion()
 		
 #####################################		
