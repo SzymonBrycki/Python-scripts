@@ -118,4 +118,7 @@ print("")
 print("Total number of files:", FilesSUM)
 print("Total number of directories:", DirectoriesSUM)
 print("Total items:", FilesSUM + DirectoriesSUM)
+print("")
+
+exit_char = input("Enter a character to exit.")
 
