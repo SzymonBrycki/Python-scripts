@@ -73,10 +73,10 @@ def printNicelyFolders(base):
 	slashes_minus = countSlashes(BaseFolder) # number of slashes in the Base Folder 
 	slashes_final = slashes - slashes_minus # number of slashes that's a difference between BaseFolder and current folder
 	
-	if base != BaseFolder:
-		beginning_of_string = findLastSlash(base) # the number of last slash in given folder, counted from the back
-	else:
-		beginning_of_string = findLastSlash(base) + 1 #if the folder shown is the base, do not show the slash
+	# if base != BaseFolder:
+	beginning_of_string = findLastSlash(base) # the number of last slash in given folder, counted from the back
+	# else:
+	#	beginning_of_string = findLastSlash(base) + 1 #if the folder shown is the base, do not show the slash
 
 	my_new_string = base[beginning_of_string:] # string from the last slash till beginning of folder name
 	
