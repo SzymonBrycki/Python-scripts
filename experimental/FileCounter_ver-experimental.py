@@ -69,31 +69,41 @@ def printNicelyFolders(base):
 	Returns: append main_string
 	'''
 	
-	slashes = countSlashes(base)
-	slashes_minus = countSlashes(BaseFolder)
-	slashes_final = slashes - slashes_minus
+	slashes = countSlashes(base) # number of slashes in current folder
+	slashes_minus = countSlashes(BaseFolder) # number of slashes in the Base Folder 
+	slashes_final = slashes - slashes_minus # number of slashes that's a difference between BaseFolder and current folder
 	
-	beginning_of_string = findLastSlash(base)
-	my_new_string = base[beginning_of_string:]
+	if base != BaseFolder:
+		beginning_of_string = findLastSlash(base) # the number of last slash in given folder, counted from the back
+	else:
+		beginning_of_string = findLastSlash(base) + 1 #if the folder shown is the base, do not show the slash
+
+	my_new_string = base[beginning_of_string:] # string from the last slash till beginning of folder name
 	
 	double_space = "  "
-	spacechars = double_space * (slashes_final -1)
-	my_new_string_2 = spacechars + my_new_string
+	spacechars = double_space * (slashes_final -1) # decides the number of spaces...
+
+	if base == BaseFolder:
+		my_new_string_2 = spacechars + my_new_string # ... at the beginning of new print
+	else:
+		my_new_string_2 = double_space + spacechars + my_new_string # add additional double space in case of non-BaseFolder folders
 	
+
 	slashes_of_main = countSlashes(BaseFolder)
 	slashes_compare = countSlashes(base)
-	
+
+	main_list = [] # empty list to store all folders
+
 	if base == BaseFolder:
-		main_string.append(my_new_string)
+		main_list.append(my_new_string)
 	else:
-		main_string.append(my_new_string_2)
-		
-		'''
-		if slashes_of_main - slashes_compare == -1:
-			print("┖ " + my_new_string)
-		else:				
-			print(spacechars + " ┖ " + my_new_string)
-		'''
+		main_list.append(my_new_string_2)
+
+	main_string = " ".join([str(item) for item in main_list])
+
+
+
+	print(main_string)
 	
 def printNicelyFiles(file):
 	pass
