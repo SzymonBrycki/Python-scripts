@@ -72,11 +72,8 @@ def printNicelyFolders(base):
 	slashes = countSlashes(base) # number of slashes in current folder
 	slashes_minus = countSlashes(BaseFolder) # number of slashes in the Base Folder 
 	slashes_final = slashes - slashes_minus # number of slashes that's a difference between BaseFolder and current folder
-	
-	# if base != BaseFolder:
+
 	beginning_of_string = findLastSlash(base) # the number of last slash in given folder, counted from the back
-	# else:
-	#	beginning_of_string = findLastSlash(base) + 1 #if the folder shown is the base, do not show the slash
 
 	my_new_string = base[beginning_of_string:] # string from the last slash till beginning of folder name
 	
@@ -88,7 +85,6 @@ def printNicelyFolders(base):
 	else:
 		my_new_string_2 = double_space + spacechars + my_new_string # add additional double space in case of non-BaseFolder folders
 	
-
 	slashes_of_main = countSlashes(BaseFolder)
 	slashes_compare = countSlashes(base)
 
@@ -100,8 +96,6 @@ def printNicelyFolders(base):
 		main_list.append(my_new_string_2)
 
 	main_string = " ".join([str(item) for item in main_list])
-
-
 
 	print(main_string)
 	
@@ -122,6 +116,7 @@ for base, dirs, files in os.walk(BaseFolder):
 	for directories in dirs:
 		DirectoriesSUM +=1
 	for Files in files:
+		printNicelyFolders(Files)
 		FilesSUM += 1
 		
 print("")
