@@ -19,4 +19,4 @@ A calculator of mathematical proportions.
 Prints the most basic information of a given computer, such an OS, OS version, name of machine in a network, architecture itp.
 
 ### TemperatureCalculator.py
-A script that asks the user for value in Celcius, Fahrenheit or Kalvin degrees and calculater the equivalent in all the other degrees.
+A script that asks the user for value in Celcius, Fahrenheit or Kalvin degrees and calculates the equivalent in all the other degrees.
