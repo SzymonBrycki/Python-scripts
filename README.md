@@ -3,6 +3,10 @@ Various scripts I have made that do not fit into any other rep.
 
 ## List of scripts with explanation
 
+### FileAndFolderMapper.py
+
+A complete script that shows all files and subfolders in a folder, nicely formatted, and offers an option of saving that data. 
+
 ### FileCounter.py
 An early version of script that counts and prints nicely all files and folders in a given directory. Currently works 100% only for folders. The improved version (still unfinished) can be found in experimental folder.
 
