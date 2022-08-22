@@ -3,7 +3,7 @@ Various scripts I have made that do not fit into any other rep.
 
 ## List of scripts with explanation
 
-### BMI_Calculator.py
+### BMI-Calculator.py
 
 A simple calculator of BMI.
 
