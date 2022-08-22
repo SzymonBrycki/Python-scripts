@@ -1,4 +1,4 @@
-print("Wlecome to the BMI Calculator. Enter your data balow.")
+print("Welcome to the BMI Calculator. Enter your data balow.")
 
 mass = int(input("Your weight in kilograms? "))
 height = float(input("Your height in meters? "))
