@@ -3,6 +3,10 @@ Various scripts I have made that do not fit into any other rep.
 
 ## List of scripts with explanation
 
+### BMI_Calculator.py
+
+A simple calculator of BMI.
+
 ### FileAndFolderMapper.py
 
 A complete script that shows all files and subfolders in a folder, nicely formatted, and offers an option of saving that data. 
