@@ -11,9 +11,6 @@ A simple calculator of BMI.
 
 A complete script that shows all files and subfolders in a folder, nicely formatted, and offers an option of saving that data. 
 
-### FileCounter.py
-An early version of script that counts and prints nicely all files and folders in a given directory. Currently works 100% only for folders. The improved version (still unfinished) can be found in experimental folder.
-
 ### FizzBuzz.py
 A script that is a solution to the popular FizzBuzz software problem.
 
