@@ -3,6 +3,10 @@ Various scripts I have made that do not fit into any other rep.
 
 ## List of scripts with explanation
 
+### Avatar folder
+
+Contains a script for creating an avatar and the generated graphics.
+
 ### BMI-Calculator.py
 
 A simple calculator of BMI.
