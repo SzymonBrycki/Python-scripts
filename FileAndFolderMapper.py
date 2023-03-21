@@ -257,9 +257,20 @@ while True:
 		date_of_creation = "File created on: " + today_formatted + " " + now_formatted
 
 		file_buffer = [opening, new_line, date_of_creation, new_line, new_line, BaseFolder, new_line, main_string]
+		file_buffer2 = str(file_buffer)
+
+		size = len(file_buffer)
+		offset = 0
+		chunk = 100
+
+		while True:
+			if offset > size:
+				break
+			f.write(file_buffer2[offset:offset+chunk])
+			offset = offset + chunk
 
 		# f.writelines("%s\n" % line for line in file_buffer)
-		f.writelines(file_buffer)
+		# f.writelines(file_buffer)
 
 		f.close()
 
