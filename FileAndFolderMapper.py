@@ -225,48 +225,62 @@ print("Total number of directories:", DirectoriesSUM)
 print("Total items:", FilesSUM + DirectoriesSUM)
 print("")
 
-Yes_no = input("Do you wish to save the result of the program? Y/N ")
-
-print("")
-
-if Yes_no.capitalize() == "Y":
-	name = input("Enter the name of file you wish to save OR leave blank for default name ")
+while True:
+	Yes_no = input("Do you wish to save the result of the program? Y/N ")
 
 	print("")
+
+	if Yes_no.upper() == "Y":
+		name = input("Enter the name of file you wish to save OR leave blank for default name ")
+
+		print("")
+		
+		if len(name) == 0:
+			name = "FileAndFolderMapper.txt"
+
+		else:
+			name = name + ".txt"
+
+		f = open(name, "w")
+		opening = "Snapshot of a folder created in FileAndFolderMapper.py "
+
+		from datetime import date, datetime
+
+		today = date.today()
+
+		today_formatted = today.strftime("%d-%b-%Y")
+
+		now = datetime.now()
+
+		now_formatted = now.strftime("%H:%M:%S") 
+
+		date_of_creation = "File created on: " + today_formatted + " " + now_formatted
+
+		file_buffer = [opening, new_line, date_of_creation, new_line, new_line, BaseFolder, new_line, main_string]
+
+		# f.writelines("%s\n" % line for line in file_buffer)
+		f.writelines(file_buffer)
+
+		f.close()
+
+		cwd = os.getcwd()
+		cwd_2 = cwd + "\\" + name 
+
+		print("File saved under the following destination: ")
+
+		print("")
+		print(cwd_2)
+
+		break
 	
-	if len(name) == 0:
-		name = "FileAndFolderMapper.txt"
+	elif Yes_no.upper() == "N":
+		print("Finishing the program without saving. ")
+
+		break
 
 	else:
-		name = name + ".txt"
+		print("Unknown command (must be Y/N). Try again. ")
 
-	f = open(name, "w")
-	opening = "Snapshot of a folder created in FileAndFolderMapper.py "
-
-	from datetime import date, datetime
-
-	today = date.today()
-
-	today_formatted = today.strftime("%d-%b-%Y")
-
-	now = datetime.now()
-
-	now_formatted = now.strftime("%H:%M:%S") 
-
-	date_of_creation = "File created on: " + today_formatted + " " + now_formatted
-
-	file_buffer = [opening, new_line, date_of_creation, new_line, new_line, BaseFolder, new_line, main_string]
-
-	# f.writelines("%s\n" % line for line in file_buffer)
-	f.writelines(file_buffer)
-
-	cwd = os.getcwd()
-	cwd_2 = cwd + "\\" + name 
-
-	print("File saved under the following destination: ")
-
-	print("")
-	print(cwd_2)
 
 print("")
 iks = input("Enter any character to finish... ")
