@@ -53,13 +53,44 @@ def string_from_list(my_list):
     # print(my_string)
     return my_string
 
+def split(word):
+    return list(word)
+
 def checker(my_string):
-    if lc not in my_string:
-        x = random_lowercase()
-        my_string + x
-    if uc not in my_string:
-        x = random_uppercase()
-        my_string + x
+    for char in split(lc):
+        if char in my_string:
+            break
+        else:
+            x = random_lowercase()
+            my_string + x
+        break 
+
+    for char in split(uc):
+        if char in my_string:
+            break
+        else:
+            x = random_uppercase()
+            my_string + x
+        break
+
+    for char in split(special):
+        if char in my_string:
+            break
+        else:
+            x = random_special()
+            my_string + x
+        break 
+
+    for char in split(nr):
+        if char in my_string:
+            break
+        else:
+            x = random_nr()
+            my_string + x
+        break
+    
+    return my_string
+
     if special not in my_string:
         x = random_special()
         my_string + x
@@ -69,7 +100,7 @@ def checker(my_string):
     return my_string
 
 # a = string_from_list(generate_safe_password(6))
-# b = checker(a)
+#b = checker(a)
 # print(b)
 
 c = checker("111111") #should add more things at the end
