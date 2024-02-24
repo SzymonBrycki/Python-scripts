@@ -25,7 +25,7 @@ def findingPOLword(string):
 def findingENGword(string):
     ending = findingPOLbeginning(string) #Polish beginning is an English ending
 
-    ENcontent = string[:ending]
+    ENcontent = string[:ending - 1]
     return ENcontent
 
 with open("Zdolności ANG to POL.txt", encoding="utf8") as read_file:
