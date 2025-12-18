@@ -1,14 +1,22 @@
 import math
 
-ja = 149597870700 # m
+# au = astronomical units
 
-koniec_Oorta = 100000*ja # m
+au = 149597870700 # m
+
+# end of the Oort cloud
+
+Oort_end = 100000*au # m
 
 light_speed = 299792458 # m/s
 
-predkosc_statku = light_speed / 100 # m/s
+#speed of shaceship (1/100 of the light speed)
 
-time_for_Oort_end = koniec_Oorta / predkosc_statku
+spaceship_speed = light_speed / 100 # m/s
+
+#time when spaceship will reach end of Oourt cloud
+
+time_for_Oort_end = Oort_end / spaceship_speed
 
 seconds_in_minute = 60
 
@@ -24,9 +32,9 @@ time_formatted = time_for_Oort_end / time_divisor
 
 print("Time of journey (POV of the spaceship)", time_formatted, "years")
 
-time_dilatation = 1 / (math.sqrt(1 - (pow(predkosc_statku, 2) / pow(light_speed, 2)))) # gamma
+time_dilatation = 1 / (math.sqrt(1 - (pow(spaceship_speed, 2) / pow(light_speed, 2)))) # gamma
 
-time_dilatation_2 = time_dilatation * predkosc_statku
+time_dilatation_2 = time_dilatation * spaceship_speed
 
 dil_formatted = time_dilatation_2 / time_divisor
 
@@ -42,11 +50,11 @@ print("Time on Earth (Wiki): ", Wiki_format, "years")
 
 #WRONG!
 
-# predkosc statku = time_dilation / math.sqrt(1 - (predkosc_statku * predkosc_statku / light_speed * light_speed))
+# spaceship_speed = time_dilation / math.sqrt(1 - (spaceship_speed * spaceship_speed / light_speed * light_speed))
 
-gamma = (math.sqrt(1 - (pow(predkosc_statku, 2) / pow(light_speed, 2))))
+gamma = (math.sqrt(1 - (pow(spaceship_speed, 2) / pow(light_speed, 2))))
 
-time_dilation = predkosc_statku * gamma
+time_dilation = spaceship_speed * gamma
 
 time_dil_for = time_dilation / time_divisor
 
