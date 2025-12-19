@@ -16,7 +16,7 @@ spaceship_speed = light_speed / 100 # m/s
 
 #time when spaceship will reach end of Oourt cloud
 
-time_for_Oort_end = Oort_end / spaceship_speed
+time_for_Oort_end = Oort_end / spaceship_speed #POV of Earth!
 
 seconds_in_minute = 60
 
@@ -30,16 +30,17 @@ time_divisor = seconds_in_minute * minutes_in_hour * hours_in_day * days_in_year
 
 time_formatted = time_for_Oort_end / time_divisor
 
-print("Time of journey (POV of the spaceship)", time_formatted, "years")
+print("Time of journey (POV of the Earth)", time_formatted, "years")
 
-time_dilatation = 1 / (math.sqrt(1 - (pow(spaceship_speed, 2) / pow(light_speed, 2)))) # gamma
+gamma = (math.sqrt(1 - (pow(spaceship_speed, 2) / pow(light_speed, 2))))
 
-time_dilatation_2 = time_dilatation * spaceship_speed
+time_on_spaceship = time_for_Oort_end / gamma
 
-dil_formatted = time_dilatation_2 / time_divisor
+time_formatted_2 = time_on_spaceship / time_divisor
 
-print("Time on Earth: ", dil_formatted, "years")
+print("Time on the Spaceship: ", time_formatted_2, "years")
 
+'''
 #from Wikipedia
 
 WikiDil = time_dilatation_2*(0.005/100) + time_dilatation_2
@@ -60,3 +61,13 @@ time_dil_for = time_dilation / time_divisor
 
 print("Spaceship time: ", time_formatted, "years")
 print("Earth time: ", time_dil_for, "years")
+
+# scapeship speed = time_dilation * gamma
+
+time_dilation = spaceship_speed / gamma
+
+time_dil_final = time_dilation / time_divisor
+
+print("Spaceship time: ", time_formatted, "years")
+print("Earth time: ", time_dil_final, "years")
+'''
